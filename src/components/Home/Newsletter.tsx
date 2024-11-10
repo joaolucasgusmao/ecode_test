@@ -7,12 +7,7 @@ const Newsletter = () => {
       <div>
         <input id="emailInput" type="email" />
         <button>
-          <Image
-            src={"/arrow.svg"}
-            alt="Botão de enviar"
-            width={17.5}
-            height={17.5}
-          />
+          <img src={"/arrow.svg"} alt="Botão de enviar" />
         </button>
       </div>
     </>

@@ -15,9 +15,11 @@ const Header = () => {
           />
         </Link>
         <button>
-          <img
+          <Image
             src={"/share.svg"}
             alt="Ícone de compartilhamento"
+            width={20}
+            height={20}
           />
         </button>
       </nav>
