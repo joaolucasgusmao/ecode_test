@@ -1,4 +1,5 @@
 import { SocialMediaLink } from "@/types/HomeInfos";
+import Link from "next/link";
 
 interface SocialMediaProps {
   socialMedia: SocialMediaLink[];
@@ -10,13 +11,13 @@ const SocialMediaIcons = ({ socialMedia }: SocialMediaProps) => {
       {socialMedia.map((social) => {
         return (
           <li key={social.slug}>
-            <a href={social.url} target="_blank" rel="noopener noreferrer">
+            <Link href={social.url} target="_blank" rel="noopener noreferrer">
               <div
                 dangerouslySetInnerHTML={{ __html: social.svg_icon_jsx }}
                 aria-label={social.slug}
                 style={{ width: 20, height: 20 }}
               />
-            </a>
+            </Link>
           </li>
         );
       })}
