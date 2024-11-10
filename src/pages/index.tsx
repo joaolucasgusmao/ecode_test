@@ -1,6 +1,7 @@
-import ProfileCard from "@/components/commons/ProfileCard";
+import ProfileCard from "@/components/Home/ProfileCard";
 import fetchProfile from "@/services/profileApi";
 import { ProfileInfos } from "@/types/HomeInfos";
+import { GetServerSideProps } from "next";
 
 interface HomeProps {
   profile: ProfileInfos;
@@ -14,7 +15,7 @@ const Home = ({ profile }: HomeProps) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const profile = await fetchProfile();
     return {
@@ -23,7 +24,7 @@ export const getServerSideProps = async () => {
   } catch (error) {
     console.error("Erro ao buscar perfil:", error);
     return {
-      notFound: true, 
+      notFound: true,
     };
   }
 };

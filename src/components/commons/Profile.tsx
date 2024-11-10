@@ -1,12 +1,11 @@
 import { ProfileInfos } from "@/types/HomeInfos";
 import Image from "next/image";
-import SocialMediaIcons from "../Home/SocialMediaIcons";
 
 interface ProfileCardProps {
   profile: ProfileInfos;
 }
 
-const ProfileCard = ({ profile }: ProfileCardProps) => {
+const Profile = ({ profile }: ProfileCardProps) => {
   return (
     <>
       <div>
@@ -19,10 +18,8 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
         />
         <h1>{profile.name}</h1>
       </div>
-      <p>{profile.bio}</p>
-      <SocialMediaIcons socialMedia={profile.social_media_links} />
     </>
   );
 };
 
-export default ProfileCard;
+export default Profile;
