@@ -10,11 +10,13 @@ const SocialMediaIcons = ({ socialMedia }: socialMediaProps) => {
       {socialMedia.map((social) => {
         return (
           <li key={social.slug}>
-            <div
-              dangerouslySetInnerHTML={{ __html: social.svg_icon_jsx }}
-              aria-label={social.slug}
-              style={{ width: 20, height: 20 }}
-            />
+            <a href={social.url} target="_blank" rel="noopener noreferrer">
+              <div
+                dangerouslySetInnerHTML={{ __html: social.svg_icon_jsx }}
+                aria-label={social.slug}
+                style={{ width: 20, height: 20 }}
+              />
+            </a>
           </li>
         );
       })}
