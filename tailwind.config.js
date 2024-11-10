@@ -13,7 +13,11 @@ module.exports = {
       },
       borderWidth: {
         6: "1px",
+        7: "2px"
       },
+      borderRadius: {
+        '50': '50%'
+      }
     },
   },
   plugins: [],

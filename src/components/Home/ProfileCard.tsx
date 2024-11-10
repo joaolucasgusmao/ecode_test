@@ -9,8 +9,8 @@ interface ProfileCardProps {
 const ProfileCard = ({ profile }: ProfileCardProps) => {
   return (
     <>
-      <Profile profile={profile} />
-      <p>{profile.bio}</p>
+      <Profile profile={profile} /> 
+      <p className={"my-4 text-base text-center w-1/2"}>{profile.bio}</p>
       <SocialMediaIcons socialMedia={profile.social_media_links} />
     </>
   );
