@@ -19,18 +19,24 @@ interface InfosProps {
 const Infos = ({ profile, medicProfile }: InfosProps) => {
   return (
     <>
-      <div>
-        <Link href={"/"}>
+      <div className={"flex justify-between w-5/6"}>
+        <Link
+          className={"border-black border-6 py-2 px-3 h-fit rounded-md"}
+          href={"/"}
+        >
           <Image
             src={"/back.svg"}
             alt="Ícone de ir para a Home"
-            width={20}
-            height={20}
+            width={10}
+            height={10}
           />
         </Link>
         <Profile profile={profile} />
-        <p>{medicProfile.birthdate} <span>({medicProfile.age} anos)</span></p>
+        <span></span>
       </div>
+      <p className={"my-1 ml-10 text-base"}>
+        {medicProfile.birthdate} <span>({medicProfile.age} anos)</span>
+      </p>
       <MedicInfos medicInfos={medicProfile} />
       <EmergencyContact emergencyContact={medicProfile} />
     </>
