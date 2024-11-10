@@ -10,12 +10,12 @@ const SocialMediaIcons = ({ socialMedia }: SocialMediaProps) => {
     <ul className={"flex gap-4 items-center my-1"}>
       {socialMedia.map((social) => {
         return (
-          <li key={social.slug} className={"bg-black p-2 rounded-md"}>
+          <li key={social.slug} className={"bg-black p-3 rounded-md"}>
             <Link href={social.url} target="_blank" rel="noopener noreferrer">
               <div
                 dangerouslySetInnerHTML={{ __html: social.svg_icon_jsx }}
                 aria-label={social.slug}
-                style={{ width: 22, height: 22, fill: 'currentcolor', color: '#FFFFFF'}}
+                style={{ width: 18, height: 18, fill: 'currentcolor', color: '#FFFFFF'}}
               />
             </Link>
           </li>
