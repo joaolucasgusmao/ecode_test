@@ -1,10 +1,12 @@
 import { useState, FormEvent } from "react";
 import Image from "next/image";
 import subscribeNewsletter from "@/services/newsletterApi";
+import EmailModal from "./EmailModal";
 
 const Newsletter = () => {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const Newsletter = () => {
       await subscribeNewsletter(email);
       setMessage("Inscrição realizada com sucesso!");
       setEmail("");
+      setShowModal(true);
     } catch (error) {
       setMessage("Erro ao se inscrever na newsletter.");
     }
@@ -22,13 +25,11 @@ const Newsletter = () => {
     <>
       <form className={"w-96 h-20 mt-6"} onSubmit={handleSubmit}>
         <label htmlFor="emailInput">Inscreva-se em nossa newsletter</label>
-        <div
-          className={
-            "flex items-center justify-between w-full h-4/5"
-          }
-        >
+        <div className={"flex items-center justify-between w-full h-4/5"}>
           <input
-            className={"w-10/12 h-12 border-black border-6 rounded-md pl-4 outline-none"}
+            className={
+              "w-10/12 h-12 border-black border-6 rounded-md pl-4 outline-none"
+            }
             id="emailInput"
             type="email"
             value={email}
@@ -49,6 +50,7 @@ const Newsletter = () => {
           </button>
         </div>
       </form>
+      {showModal && <EmailModal onClose={() => setShowModal(false)} />}
     </>
   );
 };
