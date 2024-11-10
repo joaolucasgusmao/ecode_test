@@ -1,3 +1,4 @@
+import ContentBlocks from "@/components/Home/ContentBlocks";
 import ProfileCard from "@/components/Home/ProfileCard";
 import fetchProfile from "@/services/profileApi";
 import { ProfileInfos } from "@/types/HomeInfos";
@@ -11,6 +12,7 @@ const Home = ({ profile }: HomeProps) => {
   return (
     <>
       <ProfileCard profile={profile} />
+      <ContentBlocks contentBlock={profile.content_blocks} />
     </>
   );
 };

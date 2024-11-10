@@ -6,7 +6,7 @@ export interface SocialMediaLink {
 
 export interface ContentBlockConfig {
   provider?: string;
-  url?: string;
+  url: string;
   qrcode_image_url?: string;
   email?: string;
 }
