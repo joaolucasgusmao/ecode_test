@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header>
+    <header className={"bg-black flex justify-between px-9 h-20 items-center"}>
       <Image src={"/logo.svg"} alt="Ícone da Logo" width={125.24} height={34} />
-      <nav>
-        <Link href={"/infos"}>
+      <nav className={"flex gap-4"}>
+        <Link href={"/infos"} className={"p-3 rounded-md border-white border-6"}>
           <Image
             src={"/briefcase-medical-solid 1.svg"}
             alt="Ícone das informações médicas"
@@ -14,7 +14,7 @@ const Header = () => {
             height={20}
           />
         </Link>
-        <button>
+        <button className={"p-3 rounded-md border-white border-6"}>
           <Image
             src={"/share.svg"}
             alt="Ícone de compartilhamento"
