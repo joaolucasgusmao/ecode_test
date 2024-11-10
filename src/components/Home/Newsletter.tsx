@@ -20,7 +20,7 @@ const Newsletter = () => {
 
   return (
     <>
-      <form className={"w-96 h-20"} onSubmit={handleSubmit}>
+      <form className={"w-96 h-20 mt-6"} onSubmit={handleSubmit}>
         <label htmlFor="emailInput">Inscreva-se em nossa newsletter</label>
         <div
           className={
