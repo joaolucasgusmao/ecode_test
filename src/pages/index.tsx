@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       props: { profile },
     };
   } catch (error) {
-    console.error("Erro ao se inscrever na newsletter", error);
+    console.error("Erro ao buscar perfil", error);
     return {
       notFound: true,
     };
