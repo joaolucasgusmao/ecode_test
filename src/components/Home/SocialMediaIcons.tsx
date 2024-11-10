@@ -15,7 +15,7 @@ const SocialMediaIcons = ({ socialMedia }: SocialMediaProps) => {
               <div
                 dangerouslySetInnerHTML={{ __html: social.svg_icon_jsx }}
                 aria-label={social.slug}
-                style={{ width: 23, height: 23, fill: 'currentcolor', color: '#FFFFFF'}}
+                style={{ width: 22, height: 22, fill: 'currentcolor', color: '#FFFFFF'}}
               />
             </Link>
           </li>
