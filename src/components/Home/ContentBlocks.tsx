@@ -2,23 +2,31 @@ import { ContentBlock } from "@/types/HomeInfos";
 import Image from "next/image";
 import { useState } from "react";
 import ThanksModal from "./ThanksModal";
+import PixModal from "./PixModal";
 
 interface contentBlockProps {
   contentBlock: ContentBlock[];
 }
 
 const ContentBlocks = ({ contentBlock }: contentBlockProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const [qrCodeUrl, setQrCodeUrl] = useState<string | null>(null);
 
   const openModal = (url: string) => {
     setVideoUrl(url);
     setIsModalOpen(true);
   };
 
+  const openPixModal = (url: string) => {
+    setQrCodeUrl(url);
+    setIsModalOpen(true);
+  };
+
   const closeModal = () => {
     setIsModalOpen(false);
     setVideoUrl(null);
+    setQrCodeUrl(null);
   };
 
   return (
@@ -110,8 +118,8 @@ const ContentBlocks = ({ contentBlock }: contentBlockProps) => {
                 }
               >
                 <a
-                  className={"flex flex-col items-center gap-3"}
-                  href={block.config.url}
+                  className={"flex flex-col items-center gap-3 cursor-pointer"}
+                  onClick={() => openPixModal(block.config.qrcode_image_url)}
                 >
                   <Image
                     src={"/pix.svg"}
@@ -150,9 +158,13 @@ const ContentBlocks = ({ contentBlock }: contentBlockProps) => {
           }
         })}
       </ul>
-      {/* Modal de vídeo */}
+
       {isModalOpen && videoUrl && (
         <ThanksModal videoUrl={videoUrl} onClose={closeModal} />
+      )}
+
+      {isModalOpen && qrCodeUrl && (
+        <PixModal qrCodeUrl={qrCodeUrl} onClose={closeModal} />
       )}
     </div>
   );
