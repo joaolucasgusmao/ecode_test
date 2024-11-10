@@ -1,4 +1,4 @@
-const subscribeNewsletter = async (email: any) => {
+const subscribeNewsletter = async (email: string) => {
   const response = await fetch(
     "https://api.frontend.ecode.digital/newsletter",
     {
@@ -13,9 +13,6 @@ const subscribeNewsletter = async (email: any) => {
   if (!response.ok) {
     throw new Error("Erro ao se inscrever na newsletter");
   }
-
-  const data = await response.json();
-  return data;
 };
 
 export default subscribeNewsletter;
