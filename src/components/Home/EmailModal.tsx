@@ -31,7 +31,7 @@ const EmailModal = ({ onClose }: { onClose: () => void }) => {
   return (
     <div
       className={
-        "fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center backdrop-blur-sm"
+        "fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center backdrop-blur-sm"
       }
     >
       <div
