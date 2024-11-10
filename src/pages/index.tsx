@@ -1,5 +1,5 @@
 import ContentBlocks from "@/components/Home/ContentBlocks";
-import Newsletter from "@/components/Home/NewsLetter";
+import Newsletter from "@/components/Home/Newsletter";
 import ProfileCard from "@/components/Home/ProfileCard";
 import fetchProfile from "@/services/profileApi";
 import { ProfileInfos } from "@/types/HomeInfos";

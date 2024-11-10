@@ -1,10 +1,10 @@
 import { SocialMediaLink } from "@/types/HomeInfos";
 
-interface socialMediaProps {
+interface SocialMediaProps {
   socialMedia: SocialMediaLink[];
 }
 
-const SocialMediaIcons = ({ socialMedia }: socialMediaProps) => {
+const SocialMediaIcons = ({ socialMedia }: SocialMediaProps) => {
   return (
     <ul>
       {socialMedia.map((social) => {
