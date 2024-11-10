@@ -10,7 +10,7 @@ const DefaulTemplate = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className={"flex items-center flex-col my-8 "}>{children}</main>
       <Footer />
     </>
   );
