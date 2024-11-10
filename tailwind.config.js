@@ -10,17 +10,18 @@ module.exports = {
       colors: {
         black: "#101010",
         white: "#FFFFFF",
+        gray: "#C4C4C4",
       },
       borderWidth: {
         6: "1px",
-        7: "2px"
+        7: "2px",
       },
       borderRadius: {
-        '50': '50%'
+        50: "50%",
       },
       brightness: {
-        60: '0.60'
-      }
+        60: "0.60",
+      },
     },
   },
   plugins: [],
