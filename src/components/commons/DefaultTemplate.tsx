@@ -10,7 +10,11 @@ const DefaulTemplate = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <main className={"flex items-center flex-col mx-auto my-7 w-4/5"}>
+      <main
+        className={
+          "flex items-center justify-center flex-col mx-auto  w-4/5 h-screen"
+        }
+      >
         {children}
       </main>
       <Footer />

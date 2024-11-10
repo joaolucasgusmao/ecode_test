@@ -6,11 +6,19 @@ interface EmergenyContactProps {
 
 const EmergencyContact = ({ emergencyContact }: EmergenyContactProps) => {
   return (
-    <div>
-      <h1>Contato de emergência</h1>
+    <div
+      className={
+        "flex flex-col gap-4 w-full border-gray border-b-7 py-7 border-opacity-50"
+      }
+    >
+      <h1 className={"text-3xl text-black"}>Contato de emergência</h1>
       <div>
-        <span>{emergencyContact.emergency_contact.name}</span>
-        <h2>{emergencyContact.emergency_contact.phone}</h2>
+        <span className={"text-lg"}>
+          {emergencyContact.emergency_contact.name}
+        </span>
+        <h2 className={"text-xl"}>
+          {emergencyContact.emergency_contact.phone}
+        </h2>
       </div>
     </div>
   );

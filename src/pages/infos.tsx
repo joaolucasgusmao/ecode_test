@@ -19,7 +19,7 @@ interface InfosProps {
 const Infos = ({ profile, medicProfile }: InfosProps) => {
   return (
     <>
-      <div className={"flex justify-between w-5/6"}>
+      <div className={"flex justify-between w-full"}>
         <Link
           className={"border-black border-6 py-2 px-3 h-fit rounded-md"}
           href={"/"}
