@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { ShareLinks } from "@/types/HomeInfos";
 import SideMenu from "./SideMenu";
 
@@ -11,6 +12,7 @@ interface HeaderProps {
 const Header = ({ shareLinks }: HeaderProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [isSideMenuOpen, setIsSideMenuOpen] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleShareClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -87,23 +89,25 @@ const Header = ({ shareLinks }: HeaderProps) => {
           )}
         </nav>
       </header>
-      <div
-        className={
-          "hidden max-sm:flex max-sm:justify-end max-sm:w-full max-sm:mt-4"
-        }
-      >
-        <button
-          className={"p-3 rounded-md border-black border-6 max-sm:mr-4"}
-          onClick={toggleSideMenu}
+      {router.pathname !== "/infos" && (
+        <div
+          className={
+            "hidden max-sm:flex max-sm:justify-end max-sm:w-full max-sm:mt-4"
+          }
         >
-          <Image
-            src={"/hamburguer.svg"}
-            alt="Ícone do menu"
-            width={20}
-            height={20}
-          />
-        </button>
-      </div>
+          <button
+            className={"p-3 rounded-md border-black border-6 max-sm:mr-4"}
+            onClick={toggleSideMenu}
+          >
+            <Image
+              src={"/hamburguer.svg"}
+              alt="Ícone do menu"
+              width={20}
+              height={20}
+            />
+          </button>
+        </div>
+      )}
       {isSideMenuOpen && <SideMenu onClose={toggleSideMenu} />}
     </>
   );
