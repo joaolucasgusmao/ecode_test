@@ -1,4 +1,4 @@
-# Instalação
+## Instalação
 
 Para instalar e executar o projeto, siga os passos abaixo:
 
@@ -18,4 +18,4 @@ Para instalar e executar o projeto, siga os passos abaixo:
    ```bash
     $ npm run dev
    ```
-5. O servidor estará rodando na porta 3000. O servidor estará disponível em http://localhost:3000
+5. O servidor estará disponível em http://localhost:3000
