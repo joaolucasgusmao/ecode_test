@@ -1,5 +1,13 @@
-## Instalação
+# E-code Health
+Aplicativo desenvolvido para exibir informações médicas de um usuário.
 
+## Tecnologias utilizadas
+- React.js
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+## Instalação
 Para instalar e executar o projeto, siga os passos abaixo:
 
 1. Clone o repositório:
