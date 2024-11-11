@@ -47,11 +47,11 @@ const MedicInfos = ({ medicInfos }: MedicInfosProps) => {
             {medicInfos.diseases.length > 0 ? (
               medicInfos.diseases.join(", ")
             ) : (
-              <p>Nenhuma</p>
+              <h2 className={"text-xl"}>Nenhuma</h2>
             )}
           </h2>
         </li>
-        <li>
+        <li className={"max-md:p-4"}>
           <span className={"text-lg"}>Alergias</span>
           <h2 className={"text-xl"}>
             {medicInfos.allergies.length > 0 ? (

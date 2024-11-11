@@ -21,14 +21,14 @@ const Infos = ({ profile, medicProfile }: InfosProps) => {
     <>
       <div className={"flex justify-between w-full"}>
         <Link
-          className={"border-black border-6 py-2 px-3 h-fit rounded-md"}
+          className={"border-black border-6 py-4 px-5 h-fit rounded-md"}
           href={"/"}
         >
           <Image
             src={"/back.svg"}
             alt="Ícone de ir para a Home"
-            width={10}
-            height={10}
+            width={9}
+            height={9}
           />
         </Link>
         <Profile profile={profile} />

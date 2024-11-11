@@ -49,7 +49,7 @@ const PixModal = ({
       >
         <button
           onClick={onClose}
-          className={"absolute top-4 right-3 text-white text-xl cursor-pointer"}
+          className={"absolute top-4 right-3 font-bold text-white text-xl cursor-pointer"}
         >
           X
         </button>

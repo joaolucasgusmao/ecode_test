@@ -23,7 +23,7 @@ const Newsletter = () => {
 
   return (
     <>
-      <form className={"w-96 h-20 max-sm:w-11/12"} onSubmit={handleSubmit}>
+      <form className={"w-96 h-20 max-sm:w-full"} onSubmit={handleSubmit}>
         <label htmlFor="emailInput">Inscreva-se em nossa newsletter</label>
         <div className={"flex items-center justify-between w-full h-4/5"}>
           <input
@@ -38,14 +38,14 @@ const Newsletter = () => {
             placeholder="Endereço de e-mail"
           />
           <button
-            className={"bg-black py-3 px-4 text-center rounded-md"}
+            className={"bg-black py-4 px-5 text-center rounded-md"}
             type="submit"
           >
             <Image
               src="/arrow.svg"
               alt="Botão de enviar"
-              width={12}
-              height={15}
+              width={10}
+              height={10}
             />
           </button>
         </div>

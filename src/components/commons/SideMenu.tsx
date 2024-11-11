@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 interface SideMenuProps {
@@ -27,7 +26,7 @@ const SideMenu = ({ onClose }: SideMenuProps) => {
           <button
             onClick={onClose}
             className={
-              "text-xl border-white border-6 text-white px-5 py-2 rounded-md"
+              "text-xl font-bold border-white border-6 text-white px-4 py-2 rounded-md"
             }
           >
             X
@@ -40,15 +39,15 @@ const SideMenu = ({ onClose }: SideMenuProps) => {
           >
             <Image
               src={"/briefcase-medical-solid 1.svg"}
-              alt="Botão para ir para o perfil médico"
+              alt="Botão de ir para o perfil médico"
               width={20}
               height={20}
             />
-            <p className={"text-white text-xl"}>Perfil médico</p>
+            <p className={"text-white text-xl"}>Perfil Médico</p>
           </a>
           <a
             target="_blank"
-            href="https:\/\/api.whatsapp.com\/send?text=https:\/\/agenciaecode.com.br "
+            href="https:\/\/api.whatsapp.com\/send?text=https:\/\/agenciaecode.com.br"
             className={"p-3 flex gap-5 items-center"}
           >
             <Image

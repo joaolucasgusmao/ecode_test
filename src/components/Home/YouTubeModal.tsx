@@ -48,7 +48,7 @@ const YouTubeModal = ({
       >
         <button
           onClick={onClose}
-          className={"absolute top-6 right-6 text-white text-xl"}
+          className={"absolute top-6 right-6 font-bold text-white text-xl"}
         >
           X
         </button>
@@ -58,7 +58,7 @@ const YouTubeModal = ({
           src={`https://www.youtube.com/embed/${getYouTubeVideoId(videoUrl)}`}
           frameBorder="0"
           allowFullScreen
-          className={"rounded-xl max-md-2:w-full max-sm:h-44"}
+          className={"rounded-xl max-md:w-full max-sm:h-44"}
         />
       </div>
     </div>
