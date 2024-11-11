@@ -50,7 +50,7 @@ const ContentBlocks = ({ contentBlock }: contentBlockProps) => {
                   alt={block.title}
                   width={450}
                   height={100}
-                  className={"h-full rounded-xl brightness-60"}
+                  className={"h-full rounded-xl brightness-6"}
                 />
               )}
               <Image

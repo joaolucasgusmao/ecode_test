@@ -42,7 +42,7 @@ const ThanksModal = ({
     >
       <div
         id="modal"
-        className={`bg-transparent rounded-xl p-4 relative max-w-4xl flex flex-col transition-transform transform ${
+        className={`bg-transparent rounded-xl p-4 relative max-w-4xl  flex flex-col transition-transform transform max-sm:w-4/5 ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -58,7 +58,7 @@ const ThanksModal = ({
           src={`https://www.youtube.com/embed/${getYouTubeVideoId(videoUrl)}`}
           frameBorder="0"
           allowFullScreen
-          className={"rounded-xl"}
+          className={"rounded-xl max-md-2:w-full max-sm:h-44"}
         />
       </div>
     </div>
