@@ -13,8 +13,14 @@ const Home = ({ profile }: HomeProps) => {
   return (
     <>
       <ProfileCard profile={profile} />
-      <ContentBlocks contentBlock={profile.content_blocks} />
-      <Newsletter />
+      <div
+        className={
+          "flex gap-4 my-8 flex-col items-center max-sm:w-full max-sm:mx-auto max-sm:flex-col-reverse"
+        }
+      >
+        <ContentBlocks contentBlock={profile.content_blocks} />
+        <Newsletter />
+      </div>
     </>
   );
 };
