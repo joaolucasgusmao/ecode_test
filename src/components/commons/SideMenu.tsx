@@ -33,7 +33,7 @@ const SideMenu = ({ onClose }: SideMenuProps) => {
             X
           </button>
         </div>
-        <nav className={"flex flex-col gap-4 mt-20"}>
+        <nav className={"flex flex-col gap-4 mt-14"}>
           <a
             onClick={() => handleNavigation("/infos")}
             className={"p-3 flex gap-5 items-center cursor-pointer"}
