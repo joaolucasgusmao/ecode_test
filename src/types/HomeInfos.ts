@@ -1,7 +1,7 @@
 export interface SocialMediaLink {
-  slug: string;
-  url: string;
-  svg_icon_jsx: string;
+  slug?: string;
+  url?: string;
+  svg_icon_jsx?: string;
 }
 
 export interface ContentBlockConfig {
