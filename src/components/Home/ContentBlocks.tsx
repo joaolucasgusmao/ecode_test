@@ -30,7 +30,9 @@ const ContentBlocks = ({ contentBlock }: contentBlockProps) => {
   };
 
   return (
-    <div className={"flex gap-4 my-8 max-xl:flex-col"}>
+    <div
+      className={"flex gap-4 my-8 max-xl:flex-col max-sm:w-full max-sm:mx-auto"}
+    >
       {contentBlock.map((block) => {
         if (block.type === "video") {
           const thumbnailUrl = getYouTubeThumbnail(block.config.url);

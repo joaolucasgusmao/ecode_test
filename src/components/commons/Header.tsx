@@ -15,7 +15,7 @@ const Header = ({ shareLinks }: HeaderProps) => {
   };
 
   return (
-    <header className={"bg-black flex justify-between px-9 h-20 items-center"}>
+    <header className={"bg-black flex justify-between px-9 h-20 items-center w-full"}>
       <Image src={"/logo.svg"} alt="Ícone da Logo" width={125.24} height={34} />
       <nav className={"flex gap-4"}>
         <Link
