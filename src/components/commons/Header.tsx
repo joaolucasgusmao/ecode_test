@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Dropdown from "./DropDown";
 import { ProfileInfos, ShareLinks } from "@/types/HomeInfos";
 
 interface HeaderProps {
-  profile: ProfileInfos;
+  shareLinks: ShareLinks;
 }
 
-const Header = ({ profile }: HeaderProps) => {
+const Header = ({ shareLinks }: HeaderProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
   const handleShareClick = () => {
@@ -42,8 +41,32 @@ const Header = ({ profile }: HeaderProps) => {
           />
         </button>
         {isDropdownOpen && (
-          <div className="absolute top-full mt-2 right-0 bg-white p-2 rounded-md shadow-lg">
-            <Dropdown shareLink={profile.share_links} />
+          <div
+            className={
+              "absolute top-24 right-1 rounded-md shadow-lg w-56 border-black border-6"
+            }
+          >
+            <ul
+              className={
+                "flex items-center justify-center flex-col gap-4 w-full "
+              }
+            >
+              <li className={"border-b-6 w-full text-center p-4"}>
+                <a className={"text-base"} href={shareLinks.facebook}>
+                  Facebook
+                </a>
+              </li>
+              <li className={"border-b-6 w-full text-center pb-4"}>
+                <a className={"text-base"} href={shareLinks.twitter}>
+                  Twitter
+                </a>
+              </li>
+              <li className={"w-full text-center pb-4"}>
+                <a className={"text-base"} href={shareLinks.whatsapp}>
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
           </div>
         )}
       </nav>

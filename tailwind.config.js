@@ -22,6 +22,9 @@ module.exports = {
       brightness: {
         60: "0.60",
       },
+      screens: {
+        xs: "576px",
+      },
     },
   },
   plugins: [],
