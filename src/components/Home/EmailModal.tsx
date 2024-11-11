@@ -37,7 +37,7 @@ const EmailModal = ({ onClose }: { onClose: () => void }) => {
       <div
         id="email-modal"
         className={
-          "bg-white rounded-xl p-10 relative flex flex-col items-center gap-8 w-4/12"
+          "bg-white rounded-xl p-10 relative flex flex-col items-center gap-8 w-4/12 max-sm:w-full max-sm:mx-4"
         }
       >
         <p className={"text-center text-xl"}>

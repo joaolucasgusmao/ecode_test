@@ -23,7 +23,7 @@ const Newsletter = () => {
 
   return (
     <>
-      <form className={"w-96 h-20 my-8 max-sm:w-11/12"} onSubmit={handleSubmit}>
+      <form className={"w-96 h-20 max-sm:w-11/12"} onSubmit={handleSubmit}>
         <label htmlFor="emailInput">Inscreva-se em nossa newsletter</label>
         <div className={"flex items-center justify-between w-full h-4/5"}>
           <input
