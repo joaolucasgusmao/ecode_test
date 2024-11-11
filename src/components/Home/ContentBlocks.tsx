@@ -1,7 +1,7 @@
 import { ContentBlock } from "@/types/HomeInfos";
 import Image from "next/image";
 import { useState } from "react";
-import ThanksModal from "./ThanksModal";
+import YouTubeModal from "./YouTubeModal";
 import PixModal from "./PixModal";
 
 interface contentBlockProps {
@@ -202,7 +202,7 @@ const ContentBlocks = ({ contentBlock }: contentBlockProps) => {
       </div>
 
       {isModalOpen && videoUrl && (
-        <ThanksModal videoUrl={videoUrl} onClose={closeModal} />
+        <YouTubeModal videoUrl={videoUrl} onClose={closeModal} />
       )}
 
       {isModalOpen && qrCodeUrl && (

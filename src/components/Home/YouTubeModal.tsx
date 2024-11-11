@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ThanksModal = ({
+const YouTubeModal = ({
   videoUrl,
   onClose,
 }: {
@@ -69,4 +69,4 @@ const getYouTubeVideoId = (url: string) => {
   return url.split("v=")[1]?.split("&")[0];
 };
 
-export default ThanksModal;
+export default YouTubeModal;
