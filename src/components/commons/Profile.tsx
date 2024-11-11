@@ -8,7 +8,7 @@ interface ProfileCardProps {
 const Profile = ({ profile }: ProfileCardProps) => {
   return (
     <>
-      <div className={"flex flex-col items-center gap-3 "}>
+      <div className={"flex flex-col items-center gap-3"}>
         <Image
           src={profile.avatar_url}
           alt="Imagem do perfil"

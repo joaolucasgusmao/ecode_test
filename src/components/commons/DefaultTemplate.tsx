@@ -14,7 +14,7 @@ const DefaulTemplate = ({ children, profile }: LayoutProps) => {
       <Header shareLinks={profile.share_links} />
       <main
         className={
-          "flex items-center justify-center flex-col mx-auto  w-4/5 h-screen"
+          "flex items-center justify-center flex-col mx-auto mt-12  w-auto"
         }
       >
         {children}
